@@ -142,6 +142,7 @@ public class GamesDao {
 		tempSession.close();//close the session
 		
 	}
-	}
+   
+}
 
 

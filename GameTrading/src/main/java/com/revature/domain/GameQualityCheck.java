@@ -19,10 +19,15 @@ public class GameQualityCheck {
 			+ "")
    private String img;
 	
-	@ManyToOne
-	(targetEntity = Games.class)
-	@JoinColumn(name = "gametocheckID", referencedColumnName = "gameID")
+	
+	@JoinColumn(name ="gameID")
    private int gametocheckID;
+
+	
+	public GameQualityCheck() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	public GameQualityCheck(int qualitycheckID, String img, int gametocheckID) {
 		super();

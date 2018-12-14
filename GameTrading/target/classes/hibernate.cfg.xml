@@ -18,5 +18,7 @@
 		<!-- Mapped Classes -->
 		<mapping class="com.revature.domain.GameTradeUser"/>
 		<mapping class="com.revature.domain.Games"/>
+		<mapping class="com.revature.domain.GameQualityCheck"/>
+		<mapping class="com.revature.domain.Trade"/>
 	</session-factory>
 </hibernate-configuration>

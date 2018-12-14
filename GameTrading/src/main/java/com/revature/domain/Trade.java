@@ -17,14 +17,12 @@ public class Trade {
  
 	
 	
-	@ManyToOne//foreign key constraint
-	(targetEntity = GameTradeUser.class)
-	@JoinColumn(name = "game1ID", referencedColumnName = "gameID")//foreign key constraint game1ID reference gameId from gametradeuser table
+	
+	@JoinColumn(name = "userId")//foreign key constraint game1ID reference gameId from gametradeuser table
 	private int	game1ID;
 	
-	@ManyToOne
-	(targetEntity = GameTradeUser.class)
-	@JoinColumn(name = "game2ID", referencedColumnName = "gameID")
+	
+	@JoinColumn(name = "userId")
 	private int game2ID;
 		
 	@Column(name="status")
