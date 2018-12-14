@@ -149,5 +149,18 @@ tempSession.beginTransaction();//begin a new transaction
 	tempSession.getTransaction().commit();//accept changes, surround with try catch to rollback on failure/exception
 	tempSession.close();//close the session
 }
+public void deleteByUsername(String username)//delete from database by username
+{
+	
+tempSession.beginTransaction();//begin a new transaction
+	
+	
+	GameTradeUser gameTradeUser=getUserByUsername(username);//get user by username
+	
+	tempSession.delete(gameTradeUser);//delete by object
 
+	tempSession.getTransaction().commit();//accept changes, surround with try catch to rollback on failure/exception
+	tempSession.close();//close the session
+	
+}
 }
