@@ -158,7 +158,7 @@ tempSession.beginTransaction();//begin a new transaction
 	GameTradeUser gameTradeUser=getUserByUsername(username);//get user by username
 	
 	tempSession.delete(gameTradeUser);//delete by object
-
+//tempSession.createQuery("delete from gametradeuser where username='"+username+"'").executeUpdate();another way to perform delete
 	tempSession.getTransaction().commit();//accept changes, surround with try catch to rollback on failure/exception
 	tempSession.close();//close the session
 	
