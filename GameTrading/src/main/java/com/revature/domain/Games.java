@@ -31,8 +31,8 @@ public class Games{
 	@Column(name="approved")
 	private String approved;
 	
-	@ManyToOne
-    @JoinColumn(name = "GameTradeUser.ownerID")
+	
+    @JoinColumn(name = "userID")
 	private int ownerID;
 	
 	@Column(name="img")

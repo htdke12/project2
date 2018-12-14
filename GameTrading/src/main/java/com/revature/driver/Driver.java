@@ -18,7 +18,7 @@ public class Driver {
 	public static void main(String[] args) {
 		
 		
-		Games gm=new Games(1,"newgame",22,"1999","y","1",2,"sadasdsad");	
+		Games gm=new Games(4,"newgame",22,"1999","y","1",99,"sadasdsad");	
 	GamesDao dao =new GamesDao();
 		
 		dao.insertIntoTable(gm);
