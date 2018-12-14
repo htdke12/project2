@@ -2,6 +2,8 @@ package com.revature.driver;
 
 
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -13,19 +15,18 @@ import com.revature.util.SessionUtil;
 public class Driver {
 
 	public static void main(String[] args) {
+		Session tempSession = SessionUtil.getSession();
+		tempSession.beginTransaction();//begin a new transaction
 		
-		GameTradeUser user=new GameTradeUser(5,"usertessss","test","Street","ny","67676767676","a");
-		/*Session sess = SessionUtil.getSession();
-		//System.out.println("WOrked!!!");
-		Transaction tx = sess.beginTransaction();
-		Integer newId = (Integer) sess.save(user);
+		GameTradeUser gameTradeUserList=(GameTradeUser) tempSession.createQuery("from GameTradeUser g where g.username='usern'").getSingleResult();
 		
-		//HoneyPot hp = sess.get(HoneyPot.class, 1 + newId);
-		System.out.println(9999);
-		tx.commit();
-		sess.close();*/
-		GameTradeUserDao dao= new GameTradeUserDao();
-		dao.insertIntoTable(user);
+			
+			System.out.println(gameTradeUserList.getStreetaddress());
+		
+		tempSession.getTransaction().commit();//accept changes, surround with try catch to rollback on failure/exception
+		tempSession.close();//close the session
+		
+		
 		
 	}
 
