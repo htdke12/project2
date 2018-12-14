@@ -3,13 +3,15 @@ package com.revature.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity//the class is mapped to a database
 @Table(name="gametradeuser")//this class is mapped to table gametradeuser in database
 public class GameTradeUser {
 	
-    @Id                     //this variable is mapped to the primary key in column
+    @Id    //this variable is mapped to the primary key in column
     @Column(name ="userID")//mapped to column name userID
 	private int userID; 
     

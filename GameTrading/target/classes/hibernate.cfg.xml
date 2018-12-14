@@ -17,6 +17,6 @@
 		<property name="hibernate.id.new_generator_mappings">false</property>
 		<!-- Mapped Classes -->
 		<mapping class="com.revature.domain.GameTradeUser"/>
-		
+		<mapping class="com.revature.domain.Games"/>
 	</session-factory>
 </hibernate-configuration>

@@ -32,23 +32,28 @@ public class Games{
 	private String approved;
 	
 	@ManyToOne
-	(targetEntity = GameTradeUser.class)
-	@JoinColumn(name = "ownerID", referencedColumnName = "userID")
+    @JoinColumn(name = "GameTradeUser.ownerID")
 	private int ownerID;
 	
 	@Column(name="img")
 	private String img;
 
-	public Games(int userID, String username, String pass, String streetaddress, String state, String creditcard,
-			String approved, int gameID, String gamename, int value, String gameyear, String loose, String approved2,
-			int ownerID, String img) {
+	
+
+	public Games() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Games(int gameID, String gamename, int value, String gameyear, String loose, String approved, int ownerID,
+			String img) {
 		
 		this.gameID = gameID;
 		this.gamename = gamename;
 		this.value = value;
 		this.gameyear = gameyear;
 		this.loose = loose;
-		approved = approved2;
+		this.approved = approved;
 		this.ownerID = ownerID;
 		this.img = img;
 	}
